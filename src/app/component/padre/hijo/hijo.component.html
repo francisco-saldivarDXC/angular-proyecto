@@ -1,0 +1,10 @@
+<div>
+    <h1>Componente hijo</h1>
+    <p class="col">Valor que se está recibiendo: {{parameter}}</p>
+    <div class="row">
+        <p class="col-2">Respuesta</p>
+        <div><input type="text" class="form-control" [(ngModel)]="valorHijo"/></div>
+        <div class="col-2"><button class="btn btn-primary" (click)="btnSendMessageClick();">Respuesta</button></div>
+        <p>Respuesta</p>
+    </div>
+</div>

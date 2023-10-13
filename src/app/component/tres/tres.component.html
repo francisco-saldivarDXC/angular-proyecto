@@ -1,0 +1,22 @@
+<p>tres works!</p>
+<a href="">Navigate to principal component</a>
+<p>Arreglo de numeros</p>
+<table>
+    <tr>
+        <th>Indice</th>
+        <th>Valor</th>
+        <th>Acción</th>
+        <th>Eliminar</th>
+        <th *ngIf="showModify">Nuevo</th>
+        <th *ngIf="showModify">Guardar</th>
+    </tr>
+    <tr *ngFor="let number of array; let i = index">
+        <td>{{i}}</td>
+        <td>{{number}}</td>
+        <td><button class="btn btn-warning" (click)="buttonClick()">Editar</button></td>
+        <td><button class="btn btn-danger" (click)="delete(i)">Eliminar</button></td>
+        <td><input *ngIf="showModify" [(ngModel)]="newNumber"/></td>
+        <td><button class="btn btn-primary" *ngIf="showModify" (click)="updateNumber(i)">Guardar</button></td>
+    </tr>
+</table>
+

@@ -1,0 +1,9 @@
+
+<div class="container">
+    <h1>Componente padre</h1>
+    <div class="row">
+        <div class="row-2"><input type="text" class="form-control" [(ngModel)]="sonValue" /></div>
+        <div class="row-2"><button class="btn btn-primary" (click)="btnMostrarClick();">Enviar dato</button></div>
+    </div>
+    <app-hijo [parameter]="sonValue" (message)="eventoRecibir($event)" *ngIf="showSon"></app-hijo>
+</div>
